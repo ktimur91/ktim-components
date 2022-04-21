@@ -2,11 +2,9 @@
   "name": "ktim-components",
   "private": false,
   "version": "0.0.25",
-  "main": "./dist/ktim-components.umd.js",
   "module": "./src/components/index.js",
   "exports": {
     ".": {
-      "require": "./dist/ktim-components.umd.js",
       "import": "./src/components/index.js"
     },
     "./dist/style.css": "./dist/style.css"
