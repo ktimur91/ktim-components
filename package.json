@@ -3,11 +3,10 @@
   "private": false,
   "version": "0.0.24",
   "main": "./dist/ktim-components.umd.js",
-  "module": "./dist/ktim-components.es.js",
+  "module": "./src/components/index.js",
   "exports": {
     ".": {
       "require": "./dist/ktim-components.umd.js",
-      "import-dist": "./dist/ktim-components.es.js",
       "import": "./src/components/index.js"
     },
     "./dist/style.css": "./dist/style.css"
