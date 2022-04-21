@@ -1,10 +1,7 @@
-import BaseButton from './Button.vue'
-import BaseDropDown from './DropDown.vue'
-export { BaseButton, BaseDropDown }
-
-// export { default as BaseButton } from './Button.vue'
-// export { default as DropDown } from './DropDown.vue'
+// Base
+export { default as BaseButton } from './base/Button.vue'
+export { default as BaseDropDown } from './base/DropDown.vue'
 
 // Form
-// export { default as FormSwitcher } from './form/Switcher.vue'
+export { default as FormSwitcher } from './form/Switcher.vue'
 

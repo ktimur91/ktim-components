@@ -1,5 +1,5 @@
 <template>
-  <div class="form-switcher flex ai-c ggap-10">
+  <div class="kt-form-switcher flex ai-c ggap-10">
     <input type="checkbox" :name="`form-switcher-${uid}`" :id="`form-switcher-${uid}`">
     <label :for="`form-switcher-${uid}`">
       {{ label }}
@@ -23,5 +23,5 @@ const uid = getCurrentInstance().uid
 </script>
 
 <style lang="scss" scoped>
-.form-switcher {}
+.kt-form-switcher {}
 </style>

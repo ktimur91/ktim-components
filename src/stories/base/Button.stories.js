@@ -1,16 +1,24 @@
-import MyButton from './Button.vue';
+import { BaseButton } from '../../components';
 
 // More on default export: https://storybook.js.org/docs/vue/writing-stories/introduction#default-export
 export default {
-  title: 'Example/Button',
-  component: MyButton,
+  title: 'Base/Button',
+  component: BaseButton,
   // More on argTypes: https://storybook.js.org/docs/vue/api/argtypes
   argTypes: {
-    backgroundColor: { control: 'color' },
+    // backgroundColor: { control: 'color' },
     onClick: {},
+    type: {
+      control: { type: 'select' },
+      options: ['primary', 'secondary', 'outline', 'link', 'save', 'cancel'],
+    },
+    tag: {
+      control: { type: 'select' },
+      options: ['a', 'button'],
+    },
     size: {
       control: { type: 'select' },
-      options: ['small', 'medium', 'large'],
+      options: ['sm', 'md', 'lg'],
     },
   },
 };
@@ -18,35 +26,21 @@ export default {
 // More on component templates: https://storybook.js.org/docs/vue/writing-stories/introduction#using-args
 const Template = (args) => ({
   // Components used in your story `template` are defined in the `components` object
-  components: { MyButton },
+  components: { BaseButton },
   // The story's `args` need to be mapped into the template through the `setup()` method
   setup() {
     return { args };
   },
   // And then the `args` are bound to your component with `v-bind="args"`
-  template: '<my-button v-bind="args" />',
+  template: '<BaseButton v-bind="args">Button content</BaseButton>',
 });
 
-export const Primary = Template.bind({});
 // More on args: https://storybook.js.org/docs/vue/writing-stories/args
+
+// Styles
+export const Primary = Template.bind({});
 Primary.args = {
-  primary: true,
-  label: 'Button',
-};
-
-export const Secondary = Template.bind({});
-Secondary.args = {
-  label: 'Button',
-};
-
-export const Large = Template.bind({});
-Large.args = {
-  size: 'large',
-  label: 'Button',
-};
-
-export const Small = Template.bind({});
-Small.args = {
-  size: 'small',
-  label: 'Button',
+  type: 'primary',
+  tag: 'button',
+  size: 'md'
 };

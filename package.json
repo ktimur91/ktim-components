@@ -1,7 +1,7 @@
 {
   "name": "ktim-components",
   "private": false,
-  "version": "0.0.20",
+  "version": "0.0.21",
   "main": "./dist/ktim-components.umd.js",
   "module": "./dist/ktim-components.es.js",
   "exports": {
@@ -12,11 +12,12 @@
     "./dist/style.scss": "./dist/style.css"
   },
   "scripts": {
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
-    "dev": "vite",
+    "dev": "start-storybook -p 6006",
     "build": "vite build",
-    "preview": "vite preview"
+    "build-storybook": "build-storybook",
+    "go-patch": "vite build && npm version patch && npm publish",
+    "go-minor": "vite build && npm version minor && npm publish",
+    "go-major": "vite build && npm version major && npm publish"
   },
   "files": [
     "dist",

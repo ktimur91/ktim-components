@@ -1,5 +1,5 @@
 <template>
-  <div class="drop-down">
+  <div class="kt-base-drop-down">
     <h1>drop down component</h1>
   </div>
 </template>
@@ -10,6 +10,6 @@ export default {
 }
 </script>
 
-<style>
-
+<style lang="scss" scoped>
+.kt-base-drop-down {}
 </style>

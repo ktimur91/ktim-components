@@ -1,4 +1,5 @@
-import { spaces } from 'ktim-scss'
+import 'ktim-scss'
+import '../src/assets/global.css'
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
   controls: {
