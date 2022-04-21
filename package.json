@@ -7,9 +7,10 @@
   "exports": {
     ".": {
       "require": "./dist/ktim-components.umd.js",
-      "import": "./dist/ktim-components.es.js"
+      "import-dist": "./dist/ktim-components.es.js",
+      "import": "./src/components/index.js"
     },
-    "./dist/style.scss": "./dist/style.css"
+    "./dist/style.css": "./dist/style.css"
   },
   "scripts": {
     "dev": "start-storybook -p 6006",
